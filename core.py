@@ -147,23 +147,74 @@ def displayNum(num):
         GPIO.output(DP, 1)
     pass
 
-def startCore():
+def testCore():
     while True:
-        displayDigit(1)
-        displayNum(1)
+        GPIO.output(digit1, 1)
+        GPIO.output(digit2, 0)
+        GPIO.output(digit3, 0)
+        GPIO.output(digit4, 0)
+
+        GPIO.output(A, 1)
+        GPIO.output(B, 0)
+        GPIO.output(C, 0)
+        GPIO.output(D, 1)
+        GPIO.output(E, 1)
+        GPIO.output(F, 1)
+        GPIO.output(G, 1)
+        GPIO.output(DP, 1)
+
         time.sleep(0.001)
-        displayDigit(2)
-        displayNum(2)
+
+        GPIO.output(digit1, 0)
+        GPIO.output(digit2, 1)
+        GPIO.output(digit3, 0)
+        GPIO.output(digit4, 0)
+
+        GPIO.output(A, 0)
+        GPIO.output(B, 0)
+        GPIO.output(C, 1)
+        GPIO.output(D, 0)
+        GPIO.output(E, 0)
+        GPIO.output(F, 1)
+        GPIO.output(G, 0)
+        GPIO.output(DP, 1)
+
         time.sleep(0.001)
-        displayDigit(3)
-        displayNum(3)
+
+        GPIO.output(digit1, 0)
+        GPIO.output(digit2, 0)
+        GPIO.output(digit3, 1)
+        GPIO.output(digit4, 0)
+
+        GPIO.output(A, 0)
+        GPIO.output(B, 0)
+        GPIO.output(C, 0)
+        GPIO.output(D, 0)
+        GPIO.output(E, 1)
+        GPIO.output(F, 1)
+        GPIO.output(G, 0)
+        GPIO.output(DP, 1)
+
         time.sleep(0.001)
-        displayDigit(4)
-        displayNum(4)
+
+        GPIO.output(digit1, 0)
+        GPIO.output(digit2, 0)
+        GPIO.output(digit3, 0)
+        GPIO.output(digit4, 1)
+
+        GPIO.output(A, 1)
+        GPIO.output(B, 0)
+        GPIO.output(C, 0)
+        GPIO.output(D, 1)
+        GPIO.output(E, 1)
+        GPIO.output(F, 0)
+        GPIO.output(G, 0)
+        GPIO.output(DP, 1)
+
         time.sleep(0.001)
         pass
     pass
 
-startCore()
+testCore()
 
 GPIO.cleanup()
