@@ -164,7 +164,7 @@ while True:
         digit = 0
         while digit < len(price):
             digitToDisplay = digit + 1
-            displayNum(price[digit], digitToDisplay)
+            displayNum(int(price[digit]), digitToDisplay)
             time.sleep(0.001)
             digit += 1
             pass
