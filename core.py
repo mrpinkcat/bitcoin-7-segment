@@ -54,7 +54,7 @@ def displayNum(num, digit):
         GPIO.output(digit2, 0)
         GPIO.output(digit3, 1)
         GPIO.output(digit4, 0)
-        GPIO.output(DP, 0)
+        GPIO.output(DP, 1)
         pass
     if digit == 4:
         GPIO.output(digit1, 0)
@@ -157,9 +157,9 @@ def displayNum(num, digit):
     pass
 
 while True:
-    loop = 0
     r = requests.get("https://api.coinbase.com/v2/prices/spot?currency=USD")
     price = r.json()['data']['amount'].replace(".", "")
+    loop = 0
     while loop != 30000:
         digit = 0
         while digit < len(price):
@@ -168,6 +168,7 @@ while True:
             time.sleep(0.001)
             digit += 1
             pass
+        loop += len(price)
         pass
     pass
 
