@@ -3,6 +3,7 @@
 
 import RPi.GPIO as GPIO
 import time
+import requests
 GPIO.setmode(GPIO.BCM)
 
 A = 21
