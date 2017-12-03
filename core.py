@@ -151,16 +151,16 @@ def startCore():
     while True:
         displayDigit(1)
         displayNum(1)
-        time.sleep(0.05)
+        time.sleep(0.001)
         displayDigit(2)
         displayNum(2)
-        time.sleep(0.05)
+        time.sleep(0.001)
         displayDigit(3)
         displayNum(3)
-        time.sleep(0.05)
+        time.sleep(0.001)
         displayDigit(4)
         displayNum(4)
-        time.sleep(0.05)
+        time.sleep(0.001)
         pass
     pass
 
