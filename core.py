@@ -1,7 +1,7 @@
 #GND = 1
 #3.3V = 0
 
-import GPi.GPIO as GPIO
+import RPi.GPIO as GPIO
 import time
 GPIO.setmode(GPIO.BCM)
 
