@@ -33,6 +33,10 @@ for digit in digits:
 
 def displayNum(num):
     if num == 0:
+        GPIO.output(digit1, 1)
+        GPIO.output(digit2, 1)
+        GPIO.output(digit3, 1)
+        GPIO.output(digit4, 1)
         GPIO.output(A, 0)
         GPIO.output(B, 0)
         GPIO.output(C, 0)
@@ -42,6 +46,10 @@ def displayNum(num):
         GPIO.output(G, 1)
         GPIO.output(DP, 1)
     if num == 1:
+        GPIO.output(digit1, 1)
+        GPIO.output(digit2, 1)
+        GPIO.output(digit3, 1)
+        GPIO.output(digit4, 1)
         GPIO.output(A, 1)
         GPIO.output(B, 0)
         GPIO.output(C, 0)
@@ -51,6 +59,10 @@ def displayNum(num):
         GPIO.output(G, 1)
         GPIO.output(DP, 1)
     if num == 2:
+        GPIO.output(digit1, 1)
+        GPIO.output(digit2, 1)
+        GPIO.output(digit3, 1)
+        GPIO.output(digit4, 1)
         GPIO.output(A, 0)
         GPIO.output(B, 0)
         GPIO.output(C, 1)
@@ -60,6 +72,10 @@ def displayNum(num):
         GPIO.output(G, 0)
         GPIO.output(DP, 1)
     if num == 3:
+        GPIO.output(digit1, 1)
+        GPIO.output(digit2, 1)
+        GPIO.output(digit3, 1)
+        GPIO.output(digit4, 1)
         GPIO.output(A, 0)
         GPIO.output(B, 0)
         GPIO.output(C, 0)
@@ -69,6 +85,10 @@ def displayNum(num):
         GPIO.output(G, 0)
         GPIO.output(DP, 1)
     if num == 4:
+        GPIO.output(digit1, 1)
+        GPIO.output(digit2, 1)
+        GPIO.output(digit3, 1)
+        GPIO.output(digit4, 1)
         GPIO.output(A, 1)
         GPIO.output(B, 0)
         GPIO.output(C, 0)
@@ -78,6 +98,10 @@ def displayNum(num):
         GPIO.output(G, 0)
         GPIO.output(DP, 1)
     if num == 5:
+        GPIO.output(digit1, 1)
+        GPIO.output(digit2, 1)
+        GPIO.output(digit3, 1)
+        GPIO.output(digit4, 1)
         GPIO.output(A, 0)
         GPIO.output(B, 1)
         GPIO.output(C, 0)
@@ -87,6 +111,10 @@ def displayNum(num):
         GPIO.output(G, 0)
         GPIO.output(DP, 1)
     if num == 6:
+        GPIO.output(digit1, 1)
+        GPIO.output(digit2, 1)
+        GPIO.output(digit3, 1)
+        GPIO.output(digit4, 1)
         GPIO.output(A, 0)
         GPIO.output(B, 1)
         GPIO.output(C, 0)
@@ -96,6 +124,10 @@ def displayNum(num):
         GPIO.output(G, 0)
         GPIO.output(DP, 1)
     if num == 7:
+        GPIO.output(digit1, 1)
+        GPIO.output(digit2, 1)
+        GPIO.output(digit3, 1)
+        GPIO.output(digit4, 1)
         GPIO.output(A, 0)
         GPIO.output(B, 0)
         GPIO.output(C, 0)
@@ -105,6 +137,10 @@ def displayNum(num):
         GPIO.output(G, 1)
         GPIO.output(DP, 1)
     if num == 8:
+        GPIO.output(digit1, 1)
+        GPIO.output(digit2, 1)
+        GPIO.output(digit3, 1)
+        GPIO.output(digit4, 1)
         GPIO.output(A, 0)
         GPIO.output(B, 0)
         GPIO.output(C, 0)
@@ -114,6 +150,10 @@ def displayNum(num):
         GPIO.output(G, 0)
         GPIO.output(DP, 1)
     if num == 9:
+        GPIO.output(digit1, 1)
+        GPIO.output(digit2, 1)
+        GPIO.output(digit3, 1)
+        GPIO.output(digit4, 1)
         GPIO.output(A, 0)
         GPIO.output(B, 0)
         GPIO.output(C, 0)
