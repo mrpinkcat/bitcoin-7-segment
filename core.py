@@ -164,4 +164,6 @@ def startCore():
         pass
     pass
 
+startCore()
+
 GPIO.cleanup()
