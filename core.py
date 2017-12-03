@@ -20,7 +20,11 @@ digit1 = 25
 digit2 = 24
 digit3 = 23
 digit4 = 22
-digits = (digit1, digit2, digit3, digit4)
+digit5 = 27
+digit6 = 18
+digit7 = 17
+digit8 = 4
+digits = (digit1, digit2, digit3, digit4, digit5, digit6, digit7, digit8)
 
 for segment in segments:
     GPIO.setup(segment, GPIO.OUT)
@@ -40,6 +44,10 @@ def displayNum(num, digit):
         GPIO.output(digit2, 0)
         GPIO.output(digit3, 0)
         GPIO.output(digit4, 0)
+        GPIO.output(digit5, 0)
+        GPIO.output(digit6, 0)
+        GPIO.output(digit7, 0)
+        GPIO.output(digit8, 0)
         GPIO.output(DP, 1)
         pass
     if digit == 2:
@@ -47,6 +55,10 @@ def displayNum(num, digit):
         GPIO.output(digit2, 1)
         GPIO.output(digit3, 0)
         GPIO.output(digit4, 0)
+        GPIO.output(digit5, 0)
+        GPIO.output(digit6, 0)
+        GPIO.output(digit7, 0)
+        GPIO.output(digit8, 0)
         GPIO.output(DP, 1)
         pass
     if digit == 3:
@@ -54,6 +66,10 @@ def displayNum(num, digit):
         GPIO.output(digit2, 0)
         GPIO.output(digit3, 1)
         GPIO.output(digit4, 0)
+        GPIO.output(digit5, 0)
+        GPIO.output(digit6, 0)
+        GPIO.output(digit7, 0)
+        GPIO.output(digit8, 0)
         GPIO.output(DP, 1)
         pass
     if digit == 4:
@@ -61,6 +77,54 @@ def displayNum(num, digit):
         GPIO.output(digit2, 0)
         GPIO.output(digit3, 0)
         GPIO.output(digit4, 1)
+        GPIO.output(digit5, 0)
+        GPIO.output(digit6, 0)
+        GPIO.output(digit7, 0)
+        GPIO.output(digit8, 0)
+        GPIO.output(DP, 1)
+        pass
+    if digit == 5:
+        GPIO.output(digit1, 0)
+        GPIO.output(digit2, 0)
+        GPIO.output(digit3, 0)
+        GPIO.output(digit4, 0)
+        GPIO.output(digit5, 1)
+        GPIO.output(digit6, 0)
+        GPIO.output(digit7, 0)
+        GPIO.output(digit8, 0)
+        GPIO.output(DP, 1)
+        pass
+    if digit == 6:
+        GPIO.output(digit1, 0)
+        GPIO.output(digit2, 0)
+        GPIO.output(digit3, 0)
+        GPIO.output(digit4, 0)
+        GPIO.output(digit5, 0)
+        GPIO.output(digit6, 1)
+        GPIO.output(digit7, 0)
+        GPIO.output(digit8, 0)
+        GPIO.output(DP, 1)
+        pass
+    if digit == 7:
+        GPIO.output(digit1, 0)
+        GPIO.output(digit2, 0)
+        GPIO.output(digit3, 0)
+        GPIO.output(digit4, 0)
+        GPIO.output(digit5, 0)
+        GPIO.output(digit6, 0)
+        GPIO.output(digit7, 1)
+        GPIO.output(digit8, 0)
+        GPIO.output(DP, 1)
+        pass
+    if digit == 8:
+        GPIO.output(digit1, 0)
+        GPIO.output(digit2, 0)
+        GPIO.output(digit3, 0)
+        GPIO.output(digit4, 0)
+        GPIO.output(digit5, 0)
+        GPIO.output(digit6, 0)
+        GPIO.output(digit7, 0)
+        GPIO.output(digit8, 1)
         GPIO.output(DP, 1)
         pass
 
