@@ -39,30 +39,28 @@ def displayNum(num, digit):
         GPIO.output(digit2, 0)
         GPIO.output(digit3, 0)
         GPIO.output(digit4, 0)
+        GPIO.output(DP, 1)
         pass
     if digit == 2:
         GPIO.output(digit1, 0)
         GPIO.output(digit2, 1)
         GPIO.output(digit3, 0)
         GPIO.output(digit4, 0)
+        GPIO.output(DP, 1)
         pass
     if digit == 3:
         GPIO.output(digit1, 0)
         GPIO.output(digit2, 0)
         GPIO.output(digit3, 1)
         GPIO.output(digit4, 0)
+        GPIO.output(DP, 0)
         pass
     if digit == 4:
         GPIO.output(digit1, 0)
         GPIO.output(digit2, 0)
         GPIO.output(digit3, 0)
         GPIO.output(digit4, 1)
-        pass
-    if digit == 3:
-        GPIO.output(digit1, 0)
-        GPIO.output(digit2, 0)
-        GPIO.output(digit3, 1)
-        GPIO.output(digit4, 0)
+        GPIO.output(DP, 1)
         pass
 
     if num == 0:
@@ -73,7 +71,6 @@ def displayNum(num, digit):
         GPIO.output(E, 0)
         GPIO.output(F, 0)
         GPIO.output(G, 1)
-        GPIO.output(DP, 1)
         pass
     if num == 1:
         GPIO.output(A, 1)
@@ -83,7 +80,6 @@ def displayNum(num, digit):
         GPIO.output(E, 1)
         GPIO.output(F, 1)
         GPIO.output(G, 1)
-        GPIO.output(DP, 1)
         pass
     if num == 2:
         GPIO.output(A, 0)
@@ -93,7 +89,6 @@ def displayNum(num, digit):
         GPIO.output(E, 0)
         GPIO.output(F, 1)
         GPIO.output(G, 0)
-        GPIO.output(DP, 1)
         pass
     if num == 3:
         GPIO.output(A, 0)
@@ -103,7 +98,6 @@ def displayNum(num, digit):
         GPIO.output(E, 1)
         GPIO.output(F, 1)
         GPIO.output(G, 0)
-        GPIO.output(DP, 1)
         pass
     if num == 4:
         GPIO.output(A, 1)
@@ -113,7 +107,6 @@ def displayNum(num, digit):
         GPIO.output(E, 1)
         GPIO.output(F, 0)
         GPIO.output(G, 0)
-        GPIO.output(DP, 1)
         pass
     if num == 5:
         GPIO.output(A, 0)
@@ -123,7 +116,6 @@ def displayNum(num, digit):
         GPIO.output(E, 1)
         GPIO.output(F, 0)
         GPIO.output(G, 0)
-        GPIO.output(DP, 1)
         pass
     if num == 6:
         GPIO.output(A, 0)
@@ -133,7 +125,6 @@ def displayNum(num, digit):
         GPIO.output(E, 0)
         GPIO.output(F, 0)
         GPIO.output(G, 0)
-        GPIO.output(DP, 1)
         pass
     if num == 7:
         GPIO.output(A, 0)
@@ -143,7 +134,6 @@ def displayNum(num, digit):
         GPIO.output(E, 1)
         GPIO.output(F, 1)
         GPIO.output(G, 1)
-        GPIO.output(DP, 1)
         pass
     if num == 8:
         GPIO.output(A, 0)
@@ -153,7 +143,6 @@ def displayNum(num, digit):
         GPIO.output(E, 0)
         GPIO.output(F, 0)
         GPIO.output(G, 0)
-        GPIO.output(DP, 1)
         pass
     if num == 9:
         GPIO.output(A, 0)
@@ -163,23 +152,22 @@ def displayNum(num, digit):
         GPIO.output(E, 1)
         GPIO.output(F, 0)
         GPIO.output(G, 0)
-        GPIO.output(DP, 1)
         pass
     pass
 
-def core():
-    while True:
-        displayNum(1, 1)
-        time.sleep(0.001)
-        displayNum(2, 2)
-        time.sleep(0.001)
-        displayNum(3, 3)
-        time.sleep(0.001)
-        displayNum(4, 4)
-        time.sleep(0.001)
+while True:
+    loop = 0
+    r = requests.get("https://api.coinbase.com/v2/prices/spot?currency=USD")
+    price = r.json()['data']['amount'].replace(".", "")
+    while loop != 30000:
+        digit = 0
+        while digit < len(price):
+            digitToDisplay = digit + 1
+            displayNum(price[digit], digitToDisplay)
+            time.sleep(0.001)
+            digit += 1
+            pass
         pass
     pass
-
-core()
 
 GPIO.cleanup()
