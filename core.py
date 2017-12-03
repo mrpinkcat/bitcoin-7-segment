@@ -224,7 +224,7 @@ while True:
     r = requests.get("https://api.coinbase.com/v2/prices/spot?currency=USD")
     price = r.json()['data']['amount'].replace(".", "")
     loop = 0
-    while loop != 30000:
+    while loop <= 30000:
         digit = 0
         while digit < len(price):
             digitToDisplay = digit + 1
